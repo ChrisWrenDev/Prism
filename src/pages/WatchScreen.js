@@ -1,7 +1,7 @@
 import * as React from "react";
 import Container from "@mui/material/Container";
 import HeaderMenu from "../components/HeaderMenu";
-import FeaturedContent from "../components/FeaturedContent";
+import FeaturedContent from "../components/WatchHero";
 import CastRow from "../components/CastRow";
 import ContentRow from "../components/ContentRow";
 import ContentDetails from "../components/ContentDetails";

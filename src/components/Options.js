@@ -12,7 +12,7 @@ export default function Options() {
     tvShow: false,
     genres: true,
     watched: true,
-    watch: false,
+    watchList: false,
   });
 
   const handleChange = (event) => {
@@ -80,7 +80,7 @@ export default function Options() {
             <Switch
               checked={state.watch}
               onChange={handleChange}
-              name="watch"
+              name="watchList"
             />
           }
           label="Watch List"

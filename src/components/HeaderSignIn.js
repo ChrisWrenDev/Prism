@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -16,7 +17,12 @@ export default function HeaderSignIn() {
         <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
           Prism Logo
         </Typography>
-        <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+        <Button
+          variant="outlined"
+          component={Link}
+          to={"/sign-in"}
+          sx={{ my: 1, mx: 1.5 }}
+        >
           Sign In
         </Button>
       </Toolbar>

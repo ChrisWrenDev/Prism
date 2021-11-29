@@ -36,14 +36,21 @@ export default function ThumbnailSlider(props) {
           >
             <CardMedia
               component="img"
-              image="https://source.unsplash.com/random"
+              image={`https://image.tmdb.org/t/p/original/${card.backdrop_path}`}
               alt="random"
             />
             <CardContent sx={{ flexGrow: 1 }}>
-              <Typography gutterBottom variant="h5" component="h2">
-                Heading
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="h2"
+                sx={{ fontSize: "1rem" }}
+              >
+                {card?.original_title || card?.name || card?.original_name}
               </Typography>
-              <Typography>Genre / Runtime</Typography>
+              <Typography sx={{ fontWeight: "700" }}>
+                {card.media_type || "unknown"}
+              </Typography>
             </CardContent>
           </Card>
         </div>
