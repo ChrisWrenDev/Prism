@@ -8,13 +8,13 @@ export const userSlice = createSlice({
     genres: [],
     watched: [],
     watchList: [],
+    mediaType: "movie",
     options: {
-      type: "movie",
       trending: true,
       topRated: true,
       genres: true,
-      watched: true,
-      watchList: true,
+      watched: false,
+      watchList: false,
     },
   },
 
@@ -26,16 +26,20 @@ export const userSlice = createSlice({
       state.user = null;
     },
     updateGenres(state, action) {
-      state.genres.push(action.payload);
+      state.genres = action.payload;
     },
     updateWatched(state, action) {
       state.watched.push(action.payload);
     },
-    updateWatchList(state, action) {
+    addToWatchList(state, action) {
       state.watchList.push(action.payload);
     },
+    removeFromWatchList(state, action) {
+      state.watchList.filter((movie) => movie !== action.payload);
+    },
     updateOptions(state, action) {
-      state.options[action.option] = action.status;
+      console.log(action.payload);
+      state.options[action.payload.name] = !state.options[action.payload.name];
     },
   },
 });
@@ -45,7 +49,8 @@ export const {
   logout,
   updateGenres,
   updateWatched,
-  updateWatchList,
+  addToWatchList,
+  removeFromWatchList,
   updateOptions,
 } = userSlice.actions;
 

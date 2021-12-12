@@ -5,7 +5,7 @@ const useFetchMovies = function () {
   const [loadingStatus, setLoadingStatus] = useState(false);
   const [error, setError] = useState(null);
 
-  const mediaType = useSelector((state) => state.user.options.type);
+  const mediaType = useSelector((state) => state.user.mediaType);
 
   const tmdbRequest = useCallback(
     async (requestType, applyDataFn, id) => {
