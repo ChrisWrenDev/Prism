@@ -5,20 +5,19 @@ import Logo from "../assets/prisim__logo--light.svg";
 import MainContainer from "../components/MainContainer";
 import SectionArea from "../components/SectionArea";
 
-const Landing = () => {
+const Account = () => {
   return (
     <MainContainer>
       <SectionArea>
-        <PrismLogo src={Logo} />
-        <Heading>Watch Movies Together</Heading>
-        <Description>
-          Join over 10 million people and link up with friends to host long
-          distance movie nights today!
-        </Description>
-
-        <SignUpBtn to="/account">Get Started</SignUpBtn>
+        <Link to="/">
+          <PrismLogo src={Logo} />
+        </Link>
+        <Heading>Create Your Account</Heading>
+        <Input type="text" placeholder="email" required />
+        <Input type="password" placeholder="password" required />
+        <SignUpBtn to="/browse">Continue</SignUpBtn>
         <SignInText>
-          Already have an account? <LoginLink to="/login">Log In</LoginLink>
+          Already have an account? <LoginLink to="/login">Sign In</LoginLink>
         </SignInText>
       </SectionArea>
     </MainContainer>
@@ -31,18 +30,25 @@ const PrismLogo = styled.img`
 `;
 
 const Heading = styled.h1`
-  font-size: 4.5rem;
+  font-size: 3rem;
   text-align: center;
   margin-top: 0;
   margin-bottom: 2rem;
 `;
 
-const Description = styled.p`
-  font-size: 1.8rem;
-  text-align: center;
+const Input = styled.input`
+  border: solid 1px #829bb0;
+  border-radius: 4px;
   color: #829bb0;
-  margin-top: 0;
-  margin-bottom: 3rem;
+  height: 5rem;
+  width: 35rem;
+  padding: 1.3rem 1.5rem;
+  margin-bottom: 1.6rem;
+
+  :focus {
+    outline: none;
+    border: solid 2px #0d82ec;
+  }
 `;
 
 const SignUpBtn = styled(Link)`
@@ -56,7 +62,8 @@ const SignUpBtn = styled(Link)`
   border: solid 2px #0d82ec;
   border-radius: 4px;
   padding: 1.65rem 2.4rem;
-  max-width: 38rem;
+  max-width: 100%;
+  width: 100%;
 
   :hover {
     background-color: transparent;
@@ -81,4 +88,4 @@ const LoginLink = styled(Link)`
   }
 `;
 
-export default Landing;
+export default Account;

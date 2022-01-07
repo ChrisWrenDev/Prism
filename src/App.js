@@ -1,26 +1,26 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
+import Account from "./pages/Account";
 import Browse from "./pages/Browse";
-import WatchScreen from "./pages/WatchScreen";
+import Watch from "./pages/Watch";
 import Profile from "./pages/Profile";
 
 function App() {
   return (
     <div className="app">
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/browse" element={<Browse />} />
-          <Route path="/watch" element={<WatchScreen />} />
+          <Route path="/watch" element={<Watch />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }

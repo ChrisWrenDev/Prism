@@ -1,8 +1,8 @@
 // import React from "react";
 // import styled from "styled-components";
 
-const Browse = () => {
-  return <h1>Browse</h1>;
+const Watch = () => {
+  return <h1>Watch</h1>;
 };
 
-export default Browse;
+export default Watch;
