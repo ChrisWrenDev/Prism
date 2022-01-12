@@ -2,7 +2,7 @@
   "name": "prism",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ChrisWrenDev.github.io/Prism/",
+  "homepage": "https://chriswrendev.github.io/Prism/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
     "@testing-library/jest-dom": "^5.16.1",
@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
