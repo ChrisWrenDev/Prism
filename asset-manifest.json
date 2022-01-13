@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Prism/static/css/main.e4fe0352.css",
-    "main.js": "/Prism/static/js/main.b194f923.js",
+    "main.js": "/Prism/static/js/main.89173ec7.js",
     "static/media/prism-background.jpg": "/Prism/static/media/prism-background.cbcb53005e3e046a9462.jpg",
     "static/media/prisim__logo--light.svg": "/Prism/static/media/prisim__logo--light.d7c2e0d84a1ac741a528f7bfab3c8646.svg",
     "index.html": "/Prism/index.html",
     "main.e4fe0352.css.map": "/Prism/static/css/main.e4fe0352.css.map",
-    "main.b194f923.js.map": "/Prism/static/js/main.b194f923.js.map"
+    "main.89173ec7.js.map": "/Prism/static/js/main.89173ec7.js.map"
   },
   "entrypoints": [
     "static/css/main.e4fe0352.css",
-    "static/js/main.b194f923.js"
+    "static/js/main.89173ec7.js"
   ]
 }
