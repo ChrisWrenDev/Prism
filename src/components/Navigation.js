@@ -20,56 +20,49 @@ function Navigation() {
       <Nav>
         <MenuGroup>
           <MenuHeading>Menu</MenuHeading>
-          <MenuItem>
-            <MenuLink to="/">
-              <CompassIcon />
-              Browse
-            </MenuLink>
-          </MenuItem>
-          <MenuItem>
-            <MenuLink to="/">
-              <HeartIcon />
-              Watchlist
-            </MenuLink>
-          </MenuItem>
-          <MenuItem>
-            <MenuLink to="/">
-              <CalendarIcon />
-              Coming soon
-            </MenuLink>
-          </MenuItem>
+
+          <MenuLink to="/">
+            <CompassIcon />
+            <MenuItem>Browse</MenuItem>
+          </MenuLink>
+
+          <MenuLink to="/">
+            <HeartIcon />
+            <MenuItem>Watchlist</MenuItem>
+          </MenuLink>
+
+          <MenuLink to="/">
+            <CalendarIcon />
+            <MenuItem>Coming soon</MenuItem>
+          </MenuLink>
         </MenuGroup>
 
         <MenuGroup>
           <MenuHeading>Social</MenuHeading>
-          <MenuItem>
-            <MenuLink to="/">
-              <FriendIcon />
-              Friends
-            </MenuLink>
-          </MenuItem>
-          <MenuItem>
-            <MenuLink to="/">
-              <PartiesIcon />
-              Parties
-            </MenuLink>
-          </MenuItem>
+
+          <MenuLink to="/">
+            <FriendIcon />
+            <MenuItem>Friends</MenuItem>
+          </MenuLink>
+
+          <MenuLink to="/">
+            <PartiesIcon />
+            <MenuItem>Parties</MenuItem>
+          </MenuLink>
         </MenuGroup>
 
         <MenuGroup>
           <MenuHeading>General</MenuHeading>
-          <MenuItem>
-            <MenuLink to="/">
-              <SettingsIcon />
-              Settings
-            </MenuLink>
-          </MenuItem>
-          <MenuItem>
-            <MenuLink to="/">
-              <LogoutIcon />
-              Log out
-            </MenuLink>
-          </MenuItem>
+
+          <MenuLink to="/">
+            <SettingsIcon />
+            <MenuItem>Settings</MenuItem>
+          </MenuLink>
+
+          <MenuLink to="/">
+            <LogoutIcon />
+            <MenuItem>Log out</MenuItem>
+          </MenuLink>
         </MenuGroup>
       </Nav>
     </Header>
@@ -77,14 +70,12 @@ function Navigation() {
 }
 
 const Header = styled.header`
-  height: 100%;
-  width: 19%;
   background-color: #f9faff;
   display: flex;
   flex-direction: column;
-  border-right: solid 2px #829bb0;
+  align-items: center;
+  border-right: solid 1.5px #829bb0;
   padding-top: 3rem;
-  padding-left: 3rem;
 `;
 
 const PrismLogo = styled.img`
@@ -92,7 +83,9 @@ const PrismLogo = styled.img`
   margin-bottom: 2rem;
 `;
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  margin: 0 auto;
+`;
 
 const MenuGroup = styled.div`
   margin-bottom: 6rem;
@@ -100,17 +93,29 @@ const MenuGroup = styled.div`
 
 const MenuHeading = styled.p`
   font-size: 1.6rem;
+  font-weight: 500;
   color: #829bb0;
-`;
-
-const MenuItem = styled.div`
-  font-size: 2rem;
 `;
 
 const MenuLink = styled(NavLink)`
   display: flex;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  font-size: 3rem;
   text-decoration: none;
   color: #829bb0;
+
+  &:hover {
+    color: #0d82ec;
+  }
+`;
+
+const MenuItem = styled.div`
+  font-size: 2rem;
+  font-weight: 500;
+  margin-left: 1.5rem;
 `;
 
 const CompassIcon = styled(RiCompassFill)``;
