@@ -16,7 +16,7 @@ const Browse = () => {
 
 const Body = styled.main`
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: grid;
   grid-template-columns: 3fr 11fr 1fr;
 `;
